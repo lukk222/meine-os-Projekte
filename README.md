@@ -11,7 +11,7 @@ Wenn du die EXE startest, läuft alles im Hintergrund ab (ohne hässliche CMD-Bo
 Wie gesagt: Sobald du die VM hart neustartest oder den Prozess killst, ist alles wieder komplett normal. Keine bleibenden Schäden.
 
 ## Wie wurde es gebaut?
-Der Code läuft ohne C-Standardbibliothek (`-nostdlib`), damit die EXE klein bleibt und der eigene Einstiegspunkt genutzt wird. Icon und Sound stecken direkt in der Datei.
+Der Code läuft ohne C-Standardbibliothek (`-nostdlib`), damit die EXE klein bleibt und der eigene Einstiegspunkt genutzt wird. Icon und Sound stecken direkt in der Datei (auser der sound der sound ist "Aufnahme.wav" es muss im selben ordner ligen wie das programm)
 
 Falls du es selbst auf dem Mac nachbauen willst, hier sind die Befehle:
 
