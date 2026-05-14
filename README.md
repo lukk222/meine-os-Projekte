@@ -6,8 +6,7 @@ Das Projekt wurde auf einem Mac via MacPorts für Windows cross-kompiliert.
 
 ## Was macht das Programm?
 Wenn du die EXE startest, läuft alles im Hintergrund ab (ohne hässliche CMD-Box):
-1. Die eingebettete `Aufnahme.wav` ballert in einer Endlosschleife los.
-2. Über die GDI-API wird der Bildschirm mit wilden Formen und Kreisen vollgezeichnet, bis man nichts mehr erkennt.
+Über die GDI-API wird der Bildschirm mit wilden Formen und Kreisen vollgezeichnet, bis man nichts mehr erkennt.
 
 Wie gesagt: Sobald du die VM hart neustartest oder den Prozess killst, ist alles wieder komplett normal. Keine bleibenden Schäden.
 
