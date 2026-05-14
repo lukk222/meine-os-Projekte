@@ -1,6 +1,6 @@
 # GDI Screamer & Visualizer (Safe Version)
 
-Hi! Das hier ist die harmlose Version meines GDI-Projekts. Ich habe den Code extra so umgeschrieben, dass er absolut sicher ist. Im Gegensatz zu der anderen Version wird hier KEIN MBR überschrieben und es gibt KEINE Schreibzugriffe auf `PhysicalDrive0`. Es ist ein reines visuelles und akustisches Experiment.
+Hi! Das hier ist die harmlose Version meines GDI-Projekts. Ich habe den Code extra so umgeschrieben, dass er absolut sicher ist. Im Gegensatz zu der anderen Version wird hier KEIN MBR überschrieben und es gibt KEINE Schreibzugriffe auf `sector0 oder andere kritishe dateien`. Es ist ein reines visuelles und akustisches Experiment.
 
 Das Projekt wurde auf einem Mac via MacPorts für Windows cross-kompiliert.
 
