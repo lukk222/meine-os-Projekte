@@ -6,17 +6,24 @@ The project was cross-compiled for Windows on a Mac using MacPorts.
 
 
 ## ⚠️ Epilepsy / Photosensitivity Warning
-⚠️ Warning: This program contains rapid flashing visuals, intense colors, and chaotic screen effects generated through the Windows GDI API.
-These visual effects may trigger seizures or discomfort for people with photosensitive epilepsy or other visual sensitivities.
-Please DO NOT run this program if you:
-have a history of photosensitive epilepsy
-are sensitive to rapid flashing lights or strong visual patterns
-experience dizziness, nausea, or discomfort from flashing visuals
-If you decide to run the program:
-Use it only inside a virtual machine (e.g. VirtualBox or VMware Workstation)
-Stop the program immediately if you feel any discomfort
-Avoid using it in a dark room or at full brightness
-This project is intended solely for educational and visual experimentation purposes.
+⚠️ Caution: This program generates rapidly flashing visual effects, intense colors, and chaotic screen animations using the Windows GDI API.
+
+These effects may trigger seizures,
+dizziness, or discomfort in individuals with photosensitive epilepsy or other visual sensitivities.
+Please do NOT run this program under any circumstances if you:
+
+-> suffer from photosensitive epilepsy
+-> are sensitive to flashing lights or rapidly changing patterns
+-> experience dizziness, nausea, or headaches in response to intense visual effects
+
+
+If you choose to test the program regardless:
+
+-> Run it only within a virtual machine (e.g., using VirtualBox or VMware Workstation).
+-> Terminate the program immediately if you begin to feel unwell.
+-> Do not use it in a dark room, and avoid using maximum screen brightness.
+
+This project is intended solely for demonstration and experimentation purposes within the fields of graphics and systems programming.
 
 
 ## What does the program do?
