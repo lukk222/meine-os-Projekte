@@ -1,28 +1,43 @@
 # GDI Screamer & Visualizer (Safe Version)
 
-Hi! Das hier ist die harmlose Version meines GDI-Projekts. Ich habe den Code extra so umgeschrieben, dass er absolut sicher ist. Im Gegensatz zu der anderen Version wird hier KEIN MBR überschrieben und es gibt KEINE Schreibzugriffe auf `sector0 oder andere kritishe dateien`. Es ist ein reines visuelles und akustisches Experiment.
+Hi! This is the harmless version of my GDI project. I have specifically rewritten the code to ensure it is absolutely safe. Unlike the other version, this one does NOT overwrite the MBR, and there are NO write operations to `sector0` or other critical files. It is purely a visual and auditory experiment.
 
-Das Projekt wurde auf einem Mac via MacPorts für Windows cross-kompiliert.
+The project was cross-compiled for Windows on a Mac using MacPorts.
 
-## Was macht das Programm?
-Wenn du die EXE startest, läuft alles im Hintergrund ab (ohne hässliche CMD-Box):
-Über die GDI-API wird der Bildschirm mit wilden Formen und Kreisen vollgezeichnet, bis man nichts mehr erkennt.
 
-Wie gesagt: Sobald du die VM hart neustartest oder den Prozess killst, ist alles wieder komplett normal. Keine bleibenden Schäden.
+## ⚠️ Epilepsy / Photosensitivity Warning
+⚠️ Warning: This program contains rapid flashing visuals, intense colors, and chaotic screen effects generated through the Windows GDI API.
+These visual effects may trigger seizures or discomfort for people with photosensitive epilepsy or other visual sensitivities.
+Please DO NOT run this program if you:
+have a history of photosensitive epilepsy
+are sensitive to rapid flashing lights or strong visual patterns
+experience dizziness, nausea, or discomfort from flashing visuals
+If you decide to run the program:
+Use it only inside a virtual machine (e.g. VirtualBox or VMware Workstation)
+Stop the program immediately if you feel any discomfort
+Avoid using it in a dark room or at full brightness
+This project is intended solely for educational and visual experimentation purposes.
 
-## Wie wurde es gebaut?
-Der Code läuft ohne C-Standardbibliothek (`-nostdlib`), damit die EXE klein bleibt und der eigene Einstiegspunkt genutzt wird. Icon und Sound stecken direkt in der Datei (auser der sound der sound ist "Aufnahme.wav" es muss im selben ordner ligen wie das programm)
 
-Falls du es selbst auf dem Mac nachbauen willst, hier sind die Befehle:
+## What does the program do?
+When you launch the EXE, everything runs in the background (without an unsightly CMD window):
+Using the GDI API, the screen is filled with wild shapes and circles until nothing is recognizable anymore.
 
-1. **Ressourcen verpacken:**
-   ```bash
-   /opt/local/bin/i686-w64-mingw32-windres ressourcen.rc ressourcen.o
-   ```
+As mentioned: As soon as you hard-reboot the VM or kill the process, everything returns to normal. No permanent damage.
 
-2. **Kompilieren (Universelles 32-Bit Windows):**
-   ```bash
-   /opt/local/bin/i686-w64-mingw32-g++ -static -nostdlib -msse2 -mwindows -o programm.exe code.cpp ressourcen.o -lkernel32 -luser32 -lgdi32 -ladvapi32 -lwinmm -Wl,-e,_WinMainCRTStartup -Wl,--disable-stdcall-fixup -Wl,--subsystem,windows
-   ```
+## How was it built?
+The code runs without the C standard library (`-nostdlib`) to keep the EXE size small and to utilize a custom entry point. The icon and sound are embedded directly within the file (except for the sound—the sound file is named "Aufnahme.wav" and must be located in the same folder as the program).
 
-Viel Spaß beim Testen in der VM!
+If you would like to build this yourself on a Mac, here are the commands:
+
+1. **Package resources:**
+```bash
+/opt/local/bin/i686-w64-mingw32-windres ressourcen.rc ressourcen.o
+```
+
+2. **Compile (Universal 32-bit Windows):**
+```bash
+/opt/local/bin/i686-w64-mingw32-g++ -static -nostdlib -msse2 -mwindows -o programm.exe code.cpp ressourcen.o -lkernel32 -luser32 -lgdi32 -ladvapi32 -lwinmm -Wl,-e,_WinMainCRTStartup -Wl,--disable-stdcall-fixup -Wl,--subsystem,windows
+```
+
+Have fun testing it in your VM!
